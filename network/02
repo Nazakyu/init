@@ -1,2 +1,2 @@
-ifconfig -a | grep broadcast | cut -d ' ' -f6
-ifconfig -a | grep "inet " | cut -d ' ' -f2
+ifconfig en0 | grep broadcast | cut -d ' ' -f6
+ifconfig en0 | grep broadcast | cut -d ' ' -f2,6
