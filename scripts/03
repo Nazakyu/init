@@ -1,0 +1,88 @@
+#!/usr/bin/env bash
+install_sudo()
+{
+  if [ -e /usr/bin/sudo]; then
+    check_sudo
+  else
+    su -c "apt install sudo"
+    echo "sudo has been installed! Remember that Sudo needs a restart to be effective."
+  fi
+}
+
+check_sudo()
+{
+  echo "Sudo seems already installed, do you want to update it? [y/n]"
+  read choice
+  if [$choice == "Y" || $choice == "y"]; then
+    su -c "apt install sudo"
+    echo "Sudo has been re-installed! Remember that Sudo needs a restart to be effective."
+  else
+    echo "Nothing have been installed."
+  fi
+}
+
+install_ssh()
+{
+  if [ -e /usr/bin/ssh]; then
+    check_ssh
+  else
+    su -c "apt install ssh"
+    echo "ssh has been installed!"
+  fi
+}
+
+check_ssh()
+{
+  echo "Ssh seems already installed, do you want to update it? [y/n]"
+  read choice1
+  if [$choice1 == "Y" || $choice1 == "y"]; then
+    su -c "apt install ssh"
+    echo "ssh has been re-installed!"
+  else
+    echo "Nothing have been installed."
+  fi
+}
+
+install_vim()
+{
+  if [ -e /usr/bin/vim]; then
+    check_vim
+  else
+    su -c "apt install vim"
+    echo "vim has been installed!"
+  fi
+}
+
+check_vim()
+{
+  echo "Vim seems already installed, do you want to update it? [y/n]"
+  read choice2
+  if [$choice2 == "Y" || $choice2 == "y"]; then
+    su -c "apt install vim"
+    echo "vim has been re-installed!"
+  else
+    echo "Nothing have been installed."
+  fi
+}
+
+install_zsh()
+{
+  if [ -e /usr/bin/zsh]; then
+    check_zsh
+  else
+    su -c "apt install zsh"
+    echo "zsh has been installed!"
+  fi
+}
+
+check_zsh()
+{
+  echo "Zsh seems already installed, do you want to update it? [y/n]"
+  read choice3
+  if [$choice3 == "Y" || $choice3 == "y"]; then
+    su -c "apt install zsh"
+    echo "Zsh has been re-installed!"
+  else
+    echo "Nothing have been installed."
+  fi
+}

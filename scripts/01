@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-cat /etc/passwd | cut -d: -f1,3,6 | grep /home | sed 's/:/ /g'
+cat /etc/passwd | cut -d: -f1,3,6 | sed 's/:/ /g'
