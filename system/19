@@ -1,0 +1,21 @@
+Il faut voir le dossier: /etc/init.d qui contient une liste des services lancés
+durant un boot, services appelés "startup/init scripts".
+
+apache2
+apache-htcacheclean
+console-setup.sh
+cron
+dbus
+hwclock.sh
+keyboard-setup.sh
+kmod
+networking
+procps
+rc
+rcS
+rsync
+rsyslog
+ssh
+sudo
+udev
+x11-common

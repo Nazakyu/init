@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+if [ $1 ]; then
+	user="$1"
+	pkill -KILL -u $user
+  deluser $user
+else
+  echo "Please specify a user:sh 02 user_name"
+fi

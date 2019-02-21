@@ -1,0 +1,3 @@
+Le nom du matériel est nat-1
+son IP est 10.60.1.11
+adresse commencant par 10 = privée, et dc3 est visiblement publique -> nat fait la passerelle

@@ -1,0 +1,3 @@
+En graphique: Cliquer sur son login, rentrer son mdp et appuyer sur entrée
+En ssh: Taper la commande: sudo ssh distant_username@distant_ip_address
+(note: pour trouver son ip faire commande: ip a)

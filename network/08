@@ -1,0 +1,25 @@
+L'hébergeur du site Slash16.org est AWS.
+
+pour le trouver:
+1/ faire la commande dig slash16.org
+qui renvoie:
+AUTHORITY SECTION:
+slash16.org.            6242    IN      NS      ns-686.awsdns-21.net.
+slash16.org.            6242    IN      NS      ns-1989.awsdns-56.co.uk.
+slash16.org.            6242    IN      NS      ns-144.awsdns-18.com.
+slash16.org.            6242    IN      NS      ns-1236.awsdns-26.org.
+
+OU
+
+2/ ou faire nslookup
+nslookup
+> set query=ns
+> slash16.org
+Server:         10.51.1.42
+Address:        10.51.1.42#53
+
+Non-authoritative answer:
+slash16.org     nameserver = ns-1236.awsdns-26.org.
+slash16.org     nameserver = ns-686.awsdns-21.net.
+slash16.org     nameserver = ns-144.awsdns-18.com.
+slash16.org     nameserver = ns-1989.awsdns-56.co.uk.
