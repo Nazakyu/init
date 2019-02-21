@@ -86,3 +86,31 @@ check_zsh()
     echo "Nothing have been installed."
   fi
 }
+
+install_your_choice()
+{
+  echo "Which one do you want to install:\n 1 : Sudo\n2 : ssh\n3 : Vim\n4 : zsh\n"
+  read installchoice
+  if [$installchoice == "1"]; then
+    install_sudo
+  if [$installchoice == "2"]; then
+    install_ssh
+  if [$installchoice == "3"]; then
+    install_vim
+  if [$installchoice == "4"]; then
+    install_zsh
+}
+
+echo "Hello, what do you want to do?\nAvailable softwares: Sudo, ssh, Vim, zsh\n
+      1 : Install all   2 : install one of your choice:"
+read mainchoice
+if [$mainchoice == "1"]; then
+  echo "Installing all..."
+  install_sudo
+  install_ssh
+  install_vim
+  install_zsh
+if [$mainchoice == "2"]; then
+  install_your_choice
+fi
+fi
