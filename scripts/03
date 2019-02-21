@@ -99,6 +99,7 @@ install_your_choice()
     install_vim
   if [$installchoice == "4"]; then
     install_zsh
+  fi
 }
 
 echo "Hello, what do you want to do?\nAvailable softwares: Sudo, ssh, Vim, zsh\n
