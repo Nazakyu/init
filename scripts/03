@@ -1,117 +1,142 @@
 #!/usr/bin/env bash
 install_sudo()
 {
-  if [ -e /usr/bin/sudo]; then
+  if [ -e /usr/bin/sudo ]; then
     check_sudo
   else
     su -c "apt install sudo"
-    echo "sudo has been installed! Remember that Sudo needs a restart to be effective."
+    echo "
+  sudo has been installed! Remember that Sudo needs a restart to be effective."
   fi
 }
 
 check_sudo()
 {
-  echo "Sudo seems already installed, do you want to update it? [y/n]"
+  echo "
+  Sudo seems already installed, do you want to update it? [y/n]"
   read choice
-  if [$choice == "Y" || $choice == "y"]; then
+  if [ $choice == "Y" ] || [ $choice == "y" ]; then
     su -c "apt install sudo"
-    echo "Sudo has been re-installed! Remember that Sudo needs a restart to be effective."
+    echo "
+  Sudo has been re-installed! Remember that Sudo needs a restart to be effective."
   else
-    echo "Nothing have been installed."
+    echo "
+  Nothing have been installed."
   fi
 }
 
 install_ssh()
 {
-  if [ -e /usr/bin/ssh]; then
+  if [ -e /usr/bin/ssh ]; then
     check_ssh
   else
     su -c "apt install ssh"
-    echo "ssh has been installed!"
+    echo "
+    ssh has been installed!"
   fi
 }
 
 check_ssh()
 {
-  echo "Ssh seems already installed, do you want to update it? [y/n]"
+  echo "
+  Ssh seems already installed, do you want to update it? [y/n]"
   read choice1
-  if [$choice1 == "Y" || $choice1 == "y"]; then
+  if [ $choice1 == "Y" ] || [ $choice1 == "y" ]; then
     su -c "apt install ssh"
-    echo "ssh has been re-installed!"
+    echo "
+    ssh has been re-installed!"
   else
-    echo "Nothing have been installed."
+    echo "
+  Nothing have been installed."
   fi
 }
 
 install_vim()
 {
-  if [ -e /usr/bin/vim]; then
+  if [ -e /usr/bin/vim ]; then
     check_vim
   else
     su -c "apt install vim"
-    echo "vim has been installed!"
+    echo "
+    vim has been installed!"
   fi
 }
 
 check_vim()
 {
-  echo "Vim seems already installed, do you want to update it? [y/n]"
+  echo "
+  Vim seems already installed, do you want to update it? [y/n]"
   read choice2
-  if [$choice2 == "Y" || $choice2 == "y"]; then
+  if [ $choice2 == "Y" ] || [ $choice2 == "y" ]; then
     su -c "apt install vim"
-    echo "vim has been re-installed!"
+    echo "
+  vim has been re-installed!"
   else
-    echo "Nothing have been installed."
+    echo "
+  Nothing have been installed."
   fi
 }
 
 install_zsh()
 {
-  if [ -e /usr/bin/zsh]; then
+  if [ -e /usr/bin/zsh ]; then
     check_zsh
   else
     su -c "apt install zsh"
-    echo "zsh has been installed!"
+    echo "
+    zsh has been installed!"
   fi
 }
 
 check_zsh()
 {
-  echo "Zsh seems already installed, do you want to update it? [y/n]"
+  echo "
+  Zsh seems already installed, do you want to update it? [y/n]"
   read choice3
-  if [$choice3 == "Y" || $choice3 == "y"]; then
+  if [ $choice3 == "Y" ] || [ $choice3 == "y" ]; then
     su -c "apt install zsh"
-    echo "Zsh has been re-installed!"
+    echo "
+  Zsh has been re-installed!"
   else
-    echo "Nothing have been installed."
+    echo "
+  Nothing have been installed."
   fi
 }
 
 install_your_choice()
 {
-  echo "Which one do you want to install:\n 1 : Sudo\n2 : ssh\n3 : Vim\n4 : zsh\n"
+  echo "
+  Which one do you want to install:
+
+  1 : Sudo
+  2 : ssh
+  3 : Vim
+  4 : zsh"
   read installchoice
-  if [$installchoice == "1"]; then
+  if [ $installchoice == "1" ]; then
     install_sudo
-  if [$installchoice == "2"]; then
+  elif [ $installchoice == "2" ]; then
     install_ssh
-  if [$installchoice == "3"]; then
+  elif [ $installchoice == "3" ]; then
     install_vim
-  if [$installchoice == "4"]; then
+  elif [ $installchoice == "4" ]; then
     install_zsh
   fi
 }
 
-echo "Hello, what do you want to do?\nAvailable softwares: Sudo, ssh, Vim, zsh\n
-      1 : Install all   2 : install one of your choice:"
+echo "
+      Hello, what do you want to do?
+      Available softwares: Sudo, ssh, Vim, zsh.
+
+      1 : Install all
+      2 : install one of your choice"
 read mainchoice
-if [$mainchoice == "1"]; then
+if [ $mainchoice == "1" ]; then
   echo "Installing all..."
   install_sudo
   install_ssh
   install_vim
   install_zsh
-if [$mainchoice == "2"]; then
+elif [ $mainchoice == "2" ]; then
   install_your_choice
-fi
 fi
