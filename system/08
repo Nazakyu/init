@@ -1,2 +1,1 @@
-Le fichier id_rsa
-Son path est ~/.ssh/id_rsa
+Le fichier est authorized_keys dans le dossier ~/.ssh
