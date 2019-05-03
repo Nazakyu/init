@@ -9,7 +9,7 @@
 
 ## System
 
-Last two parts are done on a Debian virtual machine.
+System and scripts parts are done on a Debian virtual machine.
 - Few useful commands: determine state of the SSH service, how to reboot it, find its PID, find RSA keys, etc...
 - How to connect via SSH, how to kill background command's process, etc...
 - List all services at boot time, list the partition tables, list all users on the VM, add a new user, list all packages...
@@ -18,7 +18,7 @@ Last two parts are done on a Debian virtual machine.
 
 - Script 01: displays only the login, UID and Path of each entry of the /etc/passwd file.
 - Script 02: delete an active user.
-- Script 03: ask the user what does he want to install on his new machine: sudo, ssh, vim or zsh. The user select one or several of the choices, the install will be done if not installed yet, or it will update it if it is already installed.
+- Script 03: personal script: ask the user what to install on a new machine. The user select one or several of the choices. The install will be done if the software is not installed yet, or it will update it if it's already installed.
 
 ## Example
 script 03:  
