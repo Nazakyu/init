@@ -1,5 +1,18 @@
 ## What is project init?
+
 **Init is an opportunity to discover system and network basic commands, many of the services used on a server machine, as well as a few ideas of scripts that can be useful for SysAdmins on a daily  basis.**
+
+### Network
+
+- Identify network interfaces, network devices...
+- Identify different IP address: DNS, broadcast, addresses on same subnet, external IP of website, etc...
+
+### System
+
+Last two parts are done on a Debian virtual machine.
+- Few useful commands: determine state of the SSH service, how to reboot it, find its PID, find RSA keys, etc...
+- How to connect via SSH, how to kill background command's process, etc...
+- List all services at boot time, list the partition tables, list all users on the VM, add a new user, list all packages...
 
 ### Scripts
 
